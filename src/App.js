@@ -1,10 +1,10 @@
-import logo from "./logo.svg";
+import Navbar from "./Navbar";
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Netflix</h1>
+    <div>
+      <Navbar />
     </div>
   );
 }
