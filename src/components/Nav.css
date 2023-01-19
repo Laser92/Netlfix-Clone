@@ -1,0 +1,19 @@
+.nav_contents{
+
+}
+.nav_logo{
+
+}
+.nav_black{
+    background-color: #111 ;
+}
+.nav{
+    position: "fixed";
+    top: 0;
+    z-index: 1;
+
+    transition-timing-function: ease-in;
+    transition: all 5s;
+    
+
+}
