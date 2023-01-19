@@ -6,14 +6,13 @@
 }
 .nav_black{
     background-color: #111 ;
+    background: linear-gradient(0deg, rgba(255,255,255,0) 44%, rgba(0,0,0,1) 100%);
+
 }
-.nav{
-    position: "fixed";
-    top: 0;
-    z-index: 1;
 
-    transition-timing-function: ease-in;
-    transition: all 5s;
-    
-
+.navbar navbar-expand-lg navbar-dark{
+    background-color: linear-gradient(0deg, rgba(255,255,255,0) 44%, rgba(0,0,0,1) 100%);
+}
+.nav-link{
+    color: #ffffffdb;
 }

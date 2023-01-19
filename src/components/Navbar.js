@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import React from "react";
-
+import "./Nav.css";
 function Navbar() {
   const [show, handleShow] = useState(false);
   const transitionNavbar = () => {
@@ -20,16 +20,18 @@ function Navbar() {
     <div className={`nav ${show && "nav_black"}`}>
       <nav
         className="navbar navbar-expand-lg navbar-dark"
-        // className="nav"
         style={{
           flex: "100%",
-          padding: 15,
+          paddingLeft: 15,
+          paddingRight: 15,
+          background: `linear-gradient(0deg,rgba(0, 0, 0, 0)0% ,#111 100%)`,
           backgroundColor: show ? "#111" : "rgba(52, 52, 52, 0)",
           height: 75,
           position: "fixed",
           width: "100%",
           display: "flex",
           transitionDuration: "0.5s",
+          zIndex: 999999,
         }}
       >
         <a className="navbar-brand" href="#" style={{ paddingLeft: 40 }}>
@@ -89,7 +91,7 @@ function Navbar() {
         <div
           style={{
             marginLeft: "auto",
-            marginRight: 100,
+            marginRight: 5,
           }}
         >
           <button
@@ -97,55 +99,59 @@ function Navbar() {
               borderWidth: 0,
               padding: 10,
               margin: 10,
+              color: "white",
+              background: "rgb(0,0,0,0) ",
             }}
           >
-            <img
-              src={require("../assets/searchIcon.png")}
-              style={{ height: 10, width: 10 }}
-            ></img>
+            <span class="material-icons">search</span>
           </button>
 
           <button
             style={{
               borderWidth: 0,
               padding: 10,
-              margin: 10,
+              // margin: 10,
+              color: "white",
+              background: "rgb(0,0,0,0) ",
             }}
           >
-            <img
-              src={require("../assets/notificationIcon.png")}
-              style={{ height: 10, width: 10 }}
-            ></img>
+            <span class="material-icons">notifications</span>
           </button>
         </div>
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="navbarDropdown"
-            role="button"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            <img
-              src={require("../assets/Netflix-avatar.png")}
-              style={{ height: 50, width: 50 }}
-            ></img>
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">
-              Action
+        <div
+          style={{
+            marginRight: 50,
+          }}
+        >
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <img
+                src={require("../assets/Netflix-avatar.png")}
+                style={{ height: 30, width: 30 }}
+              ></img>
             </a>
-            <a class="dropdown-item" href="#">
-              Another action
-            </a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">
-              Something else here
-            </a>
-          </div>
-        </li>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">
+                Action
+              </a>
+              <a class="dropdown-item" href="#">
+                Another action
+              </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">
+                Something else here
+              </a>
+            </div>
+          </li>
+        </div>
       </nav>
     </div>
   );
