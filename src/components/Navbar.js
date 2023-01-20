@@ -103,7 +103,7 @@ function Navbar() {
               background: "rgb(0,0,0,0) ",
             }}
           >
-            <span class="material-icons">search</span>
+            <span className="material-icons">search</span>
           </button>
 
           <button
@@ -115,7 +115,7 @@ function Navbar() {
               background: "rgb(0,0,0,0) ",
             }}
           >
-            <span class="material-icons">notifications</span>
+            <span className="material-icons">notifications</span>
           </button>
         </div>
         <div
@@ -123,9 +123,9 @@ function Navbar() {
             marginRight: 50,
           }}
         >
-          <li class="nav-item dropdown">
+          <li className="nav-item dropdown">
             <a
-              class="nav-link dropdown-toggle"
+              className="nav-link dropdown-toggle"
               href="#"
               id="navbarDropdown"
               role="button"
@@ -138,15 +138,15 @@ function Navbar() {
                 style={{ height: 30, width: 30 }}
               ></img>
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">
+            <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a className="dropdown-item" href="#">
                 Action
               </a>
-              <a class="dropdown-item" href="#">
+              <a className="dropdown-item" href="#">
                 Another action
               </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">
+              <div className="dropdown-divider"></div>
+              <a className="dropdown-item" href="#">
                 Something else here
               </a>
             </div>
