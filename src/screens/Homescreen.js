@@ -1,9 +1,9 @@
 import React from "react";
-import "./components/hihi.css";
-import Navbar from "./components/Navbar";
-import Row from "./components/Row";
-import Banner from "./components/Banner.js";
-import requests from "./components/requests";
+import "../components/hihi.css";
+import Navbar from "../components/Navbar";
+import Row from "../components/Row";
+import Banner from "../components/Banner.js";
+import requests from "../components/requests";
 
 function Homescreen() {
   return (
