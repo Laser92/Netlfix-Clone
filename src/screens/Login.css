@@ -1,6 +1,12 @@
 .loginScreen{
     position: relative;
     height: 100%;
+    background:url("https://blog.vpncity.com/wp-content/uploads/2020/01/xx-1024x512.png")center no-repeat;
+    background-size: cover;
+    background-color: cover;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
     
 }
 .logo{
@@ -20,4 +26,63 @@
     background-color: #e50914;
     cursor: pointer;
     border: none;
+}
+.gradient{
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    background: rgba(0, 0, 0,0.4);
+    background-image: linear-gradient(
+        to top,
+        rgba(0,0,0,0.8)0,
+        rgba(0,0,0,0)60%,
+        rgba(0,0,0,0.8)100%,
+
+    );
+}
+.body{
+    z-index: 1;
+    color: #fff;
+    padding: 20px;
+    position: absolute;
+    top:20%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+.body>h1{
+    font-size: 3.125rem;
+    margin-bottom: 20px;
+}
+.body>h3{
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+.body>h2{
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.logininput{
+    padding: 100px;
+}
+.logininput>form>input{
+    padding: 20px;
+    outline-width: 0;
+    height: 35px;
+    width: 30%;
+    max-width: 600px;
+    border: none;
+}
+.getStarted{
+    padding: 9px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #e50914;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
 }
