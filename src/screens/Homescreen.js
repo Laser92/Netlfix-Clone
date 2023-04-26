@@ -5,10 +5,10 @@ import Row from "../components/Row";
 import Banner from "../components/Banner.js";
 import requests from "../components/requests";
 
-function Homescreen() {
+function Homescreen(props) {
   return (
     <div className="bg">
-      <Navbar />
+      <Navbar logIn={props.logIn}/>
       <Banner />
       <Row
         title="Netflix Originals"

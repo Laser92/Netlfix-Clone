@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import React from "react";
 import "./Nav.css";
-function Navbar() {
+function Navbar(props) {
   const [show, handleShow] = useState(false);
   const transitionNavbar = () => {
     if (window.scrollY > 100) {
@@ -123,7 +123,12 @@ function Navbar() {
             marginRight: 50,
           }}
         >
-          <li className="nav-item dropdown">
+          <li
+            className="nav-item dropdown"
+            onClick={() => {
+              props.logIn();
+            }}
+          >
             <a
               className="nav-link dropdown-toggle"
               href="#"
@@ -138,18 +143,6 @@ function Navbar() {
                 style={{ height: 30, width: 30 }}
               ></img>
             </a>
-            <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a className="dropdown-item" href="#">
-                Action
-              </a>
-              <a className="dropdown-item" href="#">
-                Another action
-              </a>
-              <div className="dropdown-divider"></div>
-              <a className="dropdown-item" href="#">
-                Something else here
-              </a>
-            </div>
           </li>
         </div>
       </nav>

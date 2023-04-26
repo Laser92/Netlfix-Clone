@@ -1,9 +1,21 @@
 import React, { useState } from "react";
 import "./Login.css";
 import SignUpScreen from "./SignUpScreen";
+import { useEffect } from "react";
 
-function Login() {
-  const [signIn, setSignIn] = useState(false);
+function Login(props) {
+  // const [signIn, setSignIn] = useState(false);
+  const [signUp, setSignUp] = useState(false);
+  useEffect(() => {
+    setSignUp(false);
+
+    return () => {};
+  }, []);
+
+  function handleLogin() {
+    props.handleCallback();
+    // setSignIn(true);
+  }
   return (
     <div className="loginScreen">
       <div className="background">
@@ -12,13 +24,18 @@ function Login() {
           src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png"
           alt=""
         />
-        <button className="button" onClick={() => setSignIn(true)}>
+        {/* {signUp ? ( */}
+        <button className="button" onClick={() => setSignUp(true)}>
           Sign in
         </button>
+        {/* ) : ( */}
+        {/* <></> */}
+        {/* )} */}
+
         <div className="gradient" />
         <div className="body">
-          {signIn ? (
-            <SignUpScreen />
+          {signUp ? (
+            <SignUpScreen login={handleLogin} />
           ) : (
             <>
               <h1>Unlimited files, TV programmes and more.</h1>
@@ -32,7 +49,9 @@ function Login() {
                   <input type="email" placeholder="Email Address" />
                   <button
                     className="getStarted"
-                    onClick={() => setSignIn(true)}
+                    onClick={() => {
+                      setSignUp(true);
+                    }}
                   >
                     GET STARTED{" "}
                   </button>
